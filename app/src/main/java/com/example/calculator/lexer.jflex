@@ -1,6 +1,4 @@
-/* aqui indicamos en que paquete va estar el analizador
-* tambien las importaciones de las librerias o paquetes que necesitamos
-*/
+
 package com.example.calculator;
 import java_cup.runtime.Symbol;
 %%
@@ -26,8 +24,6 @@ NUMBER=[0-9]+("."[  |0-9]+)?
 "-" {return new Symbol(sym.MIN,yyline,(int)yychar, yytext());}
 "*" {return new Symbol(sym.MUL,yyline,(int)yychar, yytext());}
 "/" {return new Symbol(sym.DIV,yyline,(int)yychar, yytext());}
-
-\n {yychar=1;}
 
 {DELIM} {}
 {NUMBER} {return new Symbol(sym.NUMBER,yyline,(int)yychar, yytext());}

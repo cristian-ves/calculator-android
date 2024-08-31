@@ -2,11 +2,18 @@
 
 package com.example.calculator;
 
-import java_cup.runtime.Symbol;
+import java_cup.runtime.*;
 import com.example.calculator.tree.Node;
+
 
 // Class  name
 parser code {:
+
+    private double result = 0;
+
+    public Parser(Lexer lex) {
+        super(lex);
+    }
 
     public void syntax_error(Symbol s) {
             System.out.println("Syntax error in line: " + (s.left) +
@@ -16,6 +23,10 @@ parser code {:
     public void unrecovered_syntax_error(Symbol s) throws java.lang.Exception{
             System.out.println("Sintax error unrecovered in line: " +
             (s.left)+ " column: "+s.right+". Component: " + s.value + " not recognized.");
+    }
+
+    public int getResult() {
+        return result;
     }
 
 :}
@@ -32,9 +43,7 @@ start with s;
 
 // Productions
 s ::=
-    s expr
-    |
-    expr
+    expr:e {: result = e.getValue() :}
     ;
 
 expr ::=

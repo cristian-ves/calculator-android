@@ -36,6 +36,7 @@ android {
 }
 
 dependencies {
+    implementation("com.github.vbmacher:java-cup-runtime:11b-20160615-3")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

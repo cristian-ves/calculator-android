@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     private lateinit var display: TextView
+    private lateinit var displayRes: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         display = findViewById(R.id.calctext)
+        displayRes = findViewById(R.id.calcresult)
 
         val buttonClear: Button = findViewById(R.id.button)
         buttonClear.setOnClickListener { clearDisplay() }
@@ -40,6 +42,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun appendToDisplay(value: String) {
         display.text = display.text.toString() + value
+        val result = Result(display.text.toString())
+
+        displayRes.text = result.result.toString()
     }
 
 }
