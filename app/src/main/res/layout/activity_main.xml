@@ -7,218 +7,306 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calculator"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
-
     <Button
         android:id="@+id/button"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="285dp"
-        android:layout_height="67dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="13dp"
         android:text="Clear"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="332dp" />
-
-    <Button
-        android:id="@+id/button6"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="87dp"
-        android:layout_height="67dp"
-        android:text="9"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="214dp"
-        tools:layout_editor_absoluteY="408dp" />
-
-    <Button
-        android:id="@+id/button13"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="87dp"
-        android:layout_height="67dp"
-        android:text="3"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="214dp"
-        tools:layout_editor_absoluteY="566dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button7"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="87dp"
-        android:layout_height="67dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="9dp"
         android:text="4"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="485dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button4"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="87dp"
-        android:layout_height="67dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="9dp"
         android:text="7"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="408dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button8"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="87dp"
-        android:layout_height="67dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="9dp"
         android:text="5"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="485dp" />
+        app:layout_constraintStart_toEndOf="@+id/button7"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button9"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="87dp"
-        android:layout_height="67dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="9dp"
         android:text="6"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="214dp"
-        tools:layout_editor_absoluteY="485dp" />
+        app:layout_constraintStart_toEndOf="@+id/button8"
+        app:layout_constraintTop_toBottomOf="@+id/button19"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button11"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="87dp"
-        android:layout_height="67dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="9dp"
         android:text="1"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="566dp" />
-
-    <Button
-        android:id="@+id/button3"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="87dp"
-        android:layout_height="67dp"
-        android:text="*"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="313dp"
-        tools:layout_editor_absoluteY="408dp" />
-
-    <Button
-        android:id="@+id/button5"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="87dp"
-        android:layout_height="67dp"
-        android:text="8"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="408dp" />
-
-    <Button
-        android:id="@+id/button17"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="186dp"
-        android:layout_height="65dp"
-        android:text="0"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="643dp" />
-
-    <Button
-        android:id="@+id/button14"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="87dp"
-        android:layout_height="67dp"
-        android:text="+"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="313dp"
-        tools:layout_editor_absoluteY="566dp" />
-
-    <Button
-        android:id="@+id/button12"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="87dp"
-        android:layout_height="67dp"
-        android:text="2"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="566dp" />
-
-    <Button
-        android:id="@+id/button10"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="87dp"
-        android:layout_height="67dp"
-        android:text="-"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="313dp"
-        tools:layout_editor_absoluteY="485dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button7"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button15"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="87dp"
-        android:layout_height="67dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="9dp"
         android:text="."
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="214dp"
-        tools:layout_editor_absoluteY="643dp" />
+        app:layout_constraintStart_toEndOf="@+id/button17"
+        app:layout_constraintTop_toBottomOf="@+id/button13"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button17"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="186dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="9dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button11"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button12"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="87dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="9dp"
+        android:text="2"
+        app:layout_constraintStart_toEndOf="@+id/button11"
+        app:layout_constraintTop_toBottomOf="@+id/button8"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button14"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="87dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="13dp"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button13"
+        app:layout_constraintTop_toBottomOf="@+id/button10"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button16"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="87dp"
-        android:layout_height="67dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="13dp"
         android:text="="
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="313dp"
-        tools:layout_editor_absoluteY="643dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button15"
+        app:layout_constraintTop_toBottomOf="@+id/button14"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button13"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="87dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="9dp"
+        android:text="3"
+        app:layout_constraintStart_toEndOf="@+id/button12"
+        app:layout_constraintTop_toBottomOf="@+id/button9"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="87dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="13dp"
+        android:text="*"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button19"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button5"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="87dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="9dp"
+        android:text="8"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button19"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="87dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="9dp"
+        android:text="9"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button10"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="87dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="13dp"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button9"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button2"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="87dp"
-        android:layout_height="67dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="14dp"
         android:text="/"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="313dp"
-        tools:layout_editor_absoluteY="332dp" />
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/calctext"
+        android:layout_width="387dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/calctext"
+        android:textAlignment="textEnd"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="294dp"
+        android:layout_marginBottom="14dp"
+        android:text="Calculator"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/calctext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/divider"
         android:layout_width="409dp"
         android:layout_height="1dp"
+        android:layout_marginBottom="16dp"
         android:background="?android:attr/listDivider"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="142dp"
+        app:layout_constraintBottom_toTopOf="@+id/calcresult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calctext"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/calcresult"
         android:layout_width="387dp"
         android:layout_height="50dp"
-        android:text="@string/calctext"
-        android:textAlignment="textEnd"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="78dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="387dp"
-        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="12dp"
         android:text="@string/calcresult"
         android:textAlignment="textEnd"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#A1000000"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="153dp" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calctext"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="210dp"
+        android:layout_marginEnd="411dp"
+        android:layout_marginBottom="521dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="210dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="302dp"
+        android:layout_marginEnd="411dp"
+        android:layout_marginBottom="429dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="302dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

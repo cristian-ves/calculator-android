@@ -1,0 +1,60 @@
+// Header java code
+
+package com.example.calculator;
+
+import java_cup.runtime.Symbol;
+import com.example.calculator.tree.Node;
+
+// Class  name
+parser code {:
+
+    public void syntax_error(Symbol s) {
+            System.out.println("Syntax error in line: " + (s.left) +
+            " column: "+s.right+ ". didn't expect component: " +s.value+".");
+    }
+
+    public void unrecovered_syntax_error(Symbol s) throws java.lang.Exception{
+            System.out.println("Sintax error unrecovered in line: " +
+            (s.left)+ " column: "+s.right+". Component: " + s.value + " not recognized.");
+    }
+
+:}
+
+// Terminals
+terminal String NUMBER, PARLFT, PARRGT, SUM, MIN, MUL, DIV;
+
+// Non terminal
+non terminal s;
+non terminal Node expr, term, factor;
+
+// Initial state
+start with s;
+
+// Productions
+s ::=
+    s expr
+    |
+    expr
+    ;
+
+expr ::=
+    expr:e SUM term:t {: RESULT = new Node(e, t, Node.Type.ADDITION); :}
+    |
+    expr:e MIN term:t {: RESULT = new Node(e, t, Node.Type.SUBSTRACTION); :}
+    |
+    term:t {: RESULT = t; :}
+    ;
+
+term ::=
+    term:t MUL factor:f {: RESULT = new Node(t, f, Node.Type.MULTIPLICATION);:}
+    |
+    term:t DIV factor:f {: RESULT = new Node(t, f, Node.Type.DIVISION);:}
+    |
+    factor:f {: RESULT = f; :}
+    ;
+
+factor ::=
+    NUMBER:n {: RESULT = new Node(Double.parseDouble(n)); :}
+    |
+    PARLFT expr:e PARRGT {: RESULT = e; :}
+    ;

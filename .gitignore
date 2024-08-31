@@ -13,3 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+
+/app/src/main/java/com/example/calculator/java-cup-11b.jar
+/app/src/main/java/com/example/calculator/java-cup-11b-runtime.jar
+/app/src/main/java/com/example/calculator/jflex-full-1.9.1.jar
+
